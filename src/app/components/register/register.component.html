@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="register-section">
+        <div class="register-box">
+            <img src="/assets/logo-carga.png" alt="Logo" class="logo">
+            <h1>REGÍSTRATE</h1>
+            <p>Create a new account</p>
+            <form (ngSubmit)="register()">
+                <div class="input-group">
+                    <input type="text" [(ngModel)]="name" name="name" placeholder="Full Name" required />
+                </div>
+                <div class="input-group">
+                    <input type="email" [(ngModel)]="email" name="email" placeholder="Email address" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required />
+                </div>
+                <button type="submit">REGISTRARSE</button>
+            </form>
+            <p>OR</p>
+            <button class="login-btn" (click)="goToLogin()">VOLVER AL LOGIN</button>
+        </div>
+    </div>
+    <div class="illustration-section">
+        <img src="/assets/login-imagen1.png" alt="Login Illustration" class="illustration-img" />
+    </div>
+</div>

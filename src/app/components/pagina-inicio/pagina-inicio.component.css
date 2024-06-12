@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    margin-right: 10px;
+    width: 40px;
+    background-size: cover;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #011648;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #011648;
+    font-weight: bold;
+}
+
+.nav-menu button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #011648;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-content {
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    color: #011648;
+}
+
+.main-content .subheading {
+    font-size: 18px;
+    color: #757575;
+}
+
+.main-button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: none;
+    background-color: #011648;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.shop-image {
+    position: relative;
+    background: url('/assets/imagen-inicio.png') no-repeat center center;
+    background-size: cover;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.shop-image h2 {
+    font-size: 36px;
+}
+
+.shop-image p {
+    font-size: 18px;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: left;
+    /* Align text to the left */
+}
+
+.section h2 {
+    font-size: 36px;
+    color: #011648;
+    margin-bottom: 20px;
+}
+
+.sobre-proyecto-content {
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Align items to the center vertically */
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Add gap between items */
+}
+
+.sobre-proyecto-content .text-content {
+    max-width: 45%;
+    text-align: justify;
+    /* Justify text */
+}
+
+.sobre-proyecto-content .image-content {
+    max-width: 30%;
+    /* Increase max-width for better alignment */
+}
+
+.sobre-proyecto-content img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.section-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #011648;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.funcionalidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    /* Agregar espacio entre las tarjetas */
+}
+
+.funcionalidad {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+    /* Reducir el relleno */
+    text-align: left;
+    /* Alinear el texto a la izquierda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+    /* Calcula el ancho para que haya dos tarjetas por fila con espacio entre ellas */
+    flex-basis: calc(50% - 10px);
+    /* Especifica el ancho base para que haya dos tarjetas por fila */
+    box-sizing: border-box;
+    /* Incluye el padding y el border en el ancho */
+}
+
+.funcionalidad .icon {
+    font-size: 20px;
+    /* Tamaño del icono */
+    margin-bottom: 5px;
+    /* Espacio entre el icono y el texto */
+    display: block;
+}
+
+.funcionalidad h3 {
+    font-size: 14px;
+    /* Tamaño del título */
+    margin-bottom: 5px;
+    /* Espacio entre el título y el párrafo */
+}
+
+.funcionalidad p {
+    font-size: 12px;
+    /* Tamaño del párrafo */
+    text-align: justify;
+    /* Justificar el texto */
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #011648;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #011648;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* comienza la segunda seccion */
+#segunda-seccion {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5rem;
+    /* /el espacio de relleno requerido por todos los lados/ */
+    padding-bottom: 5rem;
+    /* /el espacio de relleno requerido por todos los lados/ */
+}
+
+#segunda-seccion-izquierda {
+    flex: 1;
+}
+
+#segunda-seccion-izquierda>h3 {
+    text-transform: uppercase;
+    font-family: "montaserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+#segunda-seccion-izquierda>p {
+    margin-top: 2em;
+    /* Equivalente a margin-block-start: 2em; */
+    margin-bottom: 2em;
+    /* Equivalente a margin-block-end: 2em; */
+    margin-left: 1px;
+    /* Equivalente a margin-inline-start: 1px; */
+    margin-right: 1px;
+    /* Equivalente a margin-inline-end: 1px; */
+    font-size: 1rem;
+    text-align: justify;
+    /* Solo mantener el valor de justify */
+}
+
+
+#segunda-seccion-derecha {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 10 px;
+    justify-items: center;
+    align-items: center;
+}
+
+#segunda-seccion-derecha>iframe {
+    max-width: 200%;
+}
+
+#segunda-seccion-derecha>hr {
+    width: 4.5rem;
+    border-color: #011648;
+    margin-left: 0;
+}
+
+/* termina segunda seccion */
+/* tercera seccion */
+#tercera-seccion {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.905)), url(/assets/logo-funcion.png) no-repeat center/cover;
+    background-attachment: fixed;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* Ajustado para reducir espacio */
+}
+
+#contenedor {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    /* Ajustado para reducir espacio */
+}
+
+.mitad {
+    width: 40%;
+    /* Mantener 40% */
+}
+
+#tercera-seccion-izq {
+    width: 60%;
+    /* Mantener 60% */
+}
+
+#tercera-seccion-der>h3 {
+    text-transform: uppercase;
+    font-family: "montaserrat", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+#tercera-seccion-der>hr {
+    width: 4.5rem;
+    border-color: #011648;
+    margin-left: 0;
+    margin-bottom: 3rem;
+}
+
+#tercera-seccion-der>p {
+    text-align: justify;
+    /* Mantener justificado */
+    margin-bottom: 4rem;
+}
+
+/* Termina tercera seccion */

@@ -1,0 +1,102 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>AdminSite</title>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a routerLink="/" class="brand"><i class='bx bxs-smile icon'></i>Translator Text</a>
+        <ul class="side-menu">
+            <li><a routerLink="/dashboard" routerLinkActive="active"><i class='bx bx-user icon'></i> Dashboard</a></li>
+            <li class="divider" data-text="main">Main</li>
+            <li>
+                <a href="#"><i class='bx bx-user-pin icon'></i> IDIOMAS <i
+                        class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a routerLink="/idiomas">Idiomas Disponible</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='bx bx-home icon'></i> TRADUCTOR <i class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a routerLink="/traduccion-text">Traductor</a></li>
+                </ul>
+            </li>
+            <li class="divider" data-text="Log out">Log out</li>
+            <li><a routerLink="/pagina-inicio"><i class='bx bx-home-smile icon'></i> Cerrar Sección</a></li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- NAVBAR -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu toggle-sidebar'></i>
+            <form action="#">
+                <div class="form-group">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search icon'></i>
+                </div>
+            </form>
+            <span class="divider"></span>
+            <div class="profile">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+            </div>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="card-container">
+                <div class="card1">
+                  <h2>IDIOMAS DISPONIBLES</h2>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    
+                    <div class="export-buttons">
+                      <button class="export-pdf" (click)="exportToPdf()"></button>
+                      <button class="export-csv" (click)="exportToCSV()"></button>
+                      <button class="export-excel" (click)="exportToExcel()"></button>
+                    </div>                    
+                  </div>
+                  <div class="card-body">
+                    <table class="data-table" id="data-table">
+                      <thead>
+                        <tr>
+                          <th>Icono</th>
+                          <th>Nombre del Idioma</th>
+                          <th>ISO 639-1</th>
+                          <th>ISO 639-2</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let row of paginatedData">
+                          <td><img [src]="row.icon" alt="Bandera del Idioma" /></td>
+                          <td>{{ row.name }}</td>
+                          <td>{{ row.iso1 }}</td>
+                          <td>{{ row.iso2 }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="pagination">
+                      <button (click)="prevPage()">Anterior</button>
+                      <span> {{ currentPage }} de {{ totalPages }}</span>
+                      <button (click)="nextPage()">Siguiente</button>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- NAVBAR -->
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</body>

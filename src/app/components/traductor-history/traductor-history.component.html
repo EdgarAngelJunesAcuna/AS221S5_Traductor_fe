@@ -1,0 +1,29 @@
+<div class="history-container">
+  <h1>Translation History</h1>
+  <button class="btn btn-primary mb-3" routerLink="/dashboard">Back to Dashboard</button>
+  <div *ngIf="translations.length === 0">No translations found.</div>
+  <div *ngIf="translations.length > 0">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Original</th>
+          <th>Translated</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let translation of translations">
+          <td>{{ translation.request_text }}</td>
+          <td>{{ translation.translated_text }}</td>
+          <td>{{ translation.from_lang }}</td>
+          <td>{{ translation.to_lang }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="deleteTranslation(translation.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

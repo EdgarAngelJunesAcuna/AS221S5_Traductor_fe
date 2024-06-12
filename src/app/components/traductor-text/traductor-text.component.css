@@ -1,0 +1,113 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('/assets/fondoTraductor.jpg'); /* Asegúrate de que esta ruta sea correcta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nav-menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Cambiado a flex-start para controlar la posición del botón */
+  padding: 10px;
+}
+
+.dashboard-button {
+  margin-left: 20px; /* Ajusta el valor para mover el botón más a la derecha */
+  padding: 10px 20px;
+  background-color: #28a745; /* Cambia el color de fondo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Añade una transición para el hover */
+}
+
+.dashboard-button:hover {
+  background-color: #218838; /* Cambia el color de fondo al hacer hover */
+}
+
+.translator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.language-selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.language-selection select,
+.language-selection button {
+  margin: 0 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.language-selection button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.language-selection button:hover {
+  background-color: #0056b3;
+}
+
+.text-areas {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 48%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  font-size: 16px;
+}
+
+button.translate-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+button.translate-button:hover {
+  background-color: #0056b3;
+}

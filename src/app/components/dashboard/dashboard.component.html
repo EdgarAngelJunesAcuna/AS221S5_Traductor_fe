@@ -1,0 +1,104 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>AdminSite</title>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a routerLink="/" class="brand"><i class='bx bxs-smile icon'></i>Translator Text</a>
+        <ul class="side-menu">
+            <li><a routerLink="/dashboard" routerLinkActive="active"><i class='bx bx-user icon'></i> Dashboard</a></li>
+            <li class="divider" data-text="main">Main</li>
+            <li>
+                <a href="#"><i class='bx bx-user-pin icon'></i> IDIOMAS <i
+                        class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                    <li><a routerLink="/idiomas">Idiomas Disponible</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='bx bx-home icon'></i> TRADUCTOR <i class='bx bx-chevron-right icon-right'></i></a>
+                <ul class="side-dropdown">
+                  <li><a routerLink="/traductor">Traductor</a></li>
+                  <li><a routerLink="/Historial">Historial</a></li> <!-- Enlace al historial de traducciones -->
+              </ul>
+            </li>
+            <li class="divider" data-text="Log out">Log out</li>
+            <li><a routerLink="/pagina-inicio"><i class='bx bx-home-smile icon'></i> Cerrar Sección</a></li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- NAVBAR -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu toggle-sidebar'></i>
+            <form action="#">
+                <div class="form-group">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search icon'></i>
+                </div>
+            </form>
+            <span class="divider"></span>
+            <div class="profile">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+            </div>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="card-container">
+                <div class="card">
+                    <div class="content">
+                        <ul class="breadcrumbs">
+                            <li><a routerLink="/">Home</a></li>
+                            <li class="divider">/</li>
+                            <li><a routerLink="/dashboard" class="active">Dashboard</a></li>
+                        </ul>
+                        <h2>BIENVENIDO A TRANSLATOR TEXT!</h2>
+                        <p>La API Translator Text es una poderosa herramienta de Microsoft Azure que forma parte de los
+                            Servicios Cognitivos de Azure. Esta API proporciona capacidades avanzadas de traducción
+                            automática de textos, permitiendo a los desarrolladores incorporar funcionalidades de
+                            traducción de idiomas en sus aplicaciones con facilidad.</p>
+                    </div>
+                    <img src="/assets/logo-inicio.png" alt="Imagen de Administrador" class="side-image">
+                </div>
+            </div>
+
+            <!-- Contenedor para las cuatro tarjetas adicionales -->
+            <div class="card-grid">
+                <div class="small-card">
+                    <h3>Traducción de Textos</h3>
+                    <p> Textos Capacidad para traducir textos en tiempo real entre más de 70 idiomas diferentes,
+                        ayudando a superar las barreras del idioma en aplicaciones globales.</p>
+                </div>
+                <div class="small-card">
+                    <h3>Detección de Idioma</h3>
+                    <p>La API puede identificar automáticamente el idioma de origen de un texto dado, lo que facilita la
+                        integración en sistemas donde los usuarios pueden ingresar contenido en múltiples idiomas.</p>
+                </div>
+                <div class="small-card">
+                    <h3>Traducción de Documentos</h3>
+                    <p> Documentos Además de textos cortos, esta API también es capaz de manejar la traducción de
+                        documentos completos, manteniendo el formato original tanto como sea posible.</p>
+                </div>
+                <div class="small-card">
+                    <h3>Personalización</h3>
+                    <p>Los desarrolladores pueden entrenar modelos de traducción personalizados que se ajusten mejor al
+                        tono y terminología específica de su negocio o industria.</p>
+                </div>
+            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- NAVBAR -->
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</body>

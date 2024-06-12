@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="login-section">
+        <div class="login-box">
+            <img src="/assets/logo-carga.png" alt="Logo" class="logo">
+            <h1>TRANSLATOR TEXT</h1>
+            <p>Login into your account</p>
+            <form (ngSubmit)="login()">
+                <div class="input-group">
+                    <input type="email" [(ngModel)]="email" name="email" placeholder="Email address" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required />
+                </div>
+                <a href="#" class="forgot-password" (click)="goToRecovery()">Forgot password?</a>
+                <button type="submit">Ingresar</button>
+            </form>
+            <p>OR</p>
+            <button class="register-btn" (click)="goToRegister()">REGÍSTRATE AHORA</button>
+        </div>
+    </div>
+    <div class="illustration-section">
+        <img src="/assets/login-imagen.png" alt="Login Illustration" class="illustration-img" />
+    </div>
+</div>

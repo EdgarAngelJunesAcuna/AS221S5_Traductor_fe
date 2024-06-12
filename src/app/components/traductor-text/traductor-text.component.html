@@ -1,0 +1,20 @@
+<nav class="nav-menu">
+  <button (click)="navigateToDashboard()" class="dashboard-button">Back to Dashboard</button>
+</nav>
+
+<div class="translator-container">
+  <div class="language-selection">
+    <select [(ngModel)]="fromLang">
+      <option *ngFor="let lang of languages" [value]="lang.code">{{ lang.name }}</option>
+    </select>
+    <button (click)="swapLanguages()">⇄</button>
+    <select [(ngModel)]="toLang">
+      <option *ngFor="let lang of languages" [value]="lang.code">{{ lang.name }}</option>
+    </select>
+  </div>
+  <div class="text-areas">
+    <textarea [(ngModel)]="textToTranslate" placeholder="Escribe o pega el texto aquí."></textarea>
+    <textarea [value]="translatedText" readonly placeholder="Aquí aparecerá la traducción."></textarea>
+  </div>
+  <button (click)="translateText()" class="translate-button">Translate</button>
+</div>
