@@ -10,7 +10,7 @@ import { Translation } from 'src/app/Models/Translation';
 })
 export class TranslatorService {
 
-  private apiUrl = 'http://localhost:8080'; // Define tu URL base del backend aquí
+  private apiUrl = 'https://didactic-sniffle-9rx95x799w6c7rwj-8080.app.github.dev'; // Define tu URL base del backend aquí
   private microsoftTranslatorUrl = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0'; // URL de Microsoft Translator
 
   private translatorKey = '91b6a3785f444aa8be105167862b6daa'; // Reemplaza esto con tu clave de suscripción a Microsoft Translator
@@ -41,6 +41,22 @@ export class TranslatorService {
   getAllTranslations(): Observable<any[]> {
     const url = `${this.apiUrl}/translate/all`;
     return this.http.get<any[]>(url);
+  }
+
+  getAllInactiveTranslations(): Observable<Translation[]> {
+    const url = `${this.apiUrl}/translate/inactives`;
+    return this.http.get<Translation[]>(url);
+  }
+
+  activateTranslation(id: number): Observable<Translation> {
+    const url = `${this.apiUrl}/translate/activate/${id}`;
+    return this.http.put<Translation>(url, null); // Assuming no body is needed for activation
+  }
+
+  editTranslation(id: number, text: string, fromLang: string, toLang: string): Observable<Translation> {
+    const url = `${this.apiUrl}/translate/edit/${id}`;
+    const body = { request_text: text, from_lang: fromLang, to_lang: toLang };
+    return this.http.put<Translation>(url, body);
   }
 
   saveTranslation(requestText: string, translatedText: string, fromLang: string, toLang: string): Observable<Translation> {
