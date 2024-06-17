@@ -1,6 +1,8 @@
+<!-- traductor-history.component.html -->
 <div class="history-container">
   <h1>Translation History</h1>
-  <button class="btn btn-primary mb-3" routerLink="/dashboard">Back to Dashboard</button>
+  <button class="btn btn-primary mb-3 btn-margin-right" routerLink="/dashboard">Back to Dashboard</button>
+  <button class="btn btn-primary mb-3" routerLink="/inactive">Inactivos</button>
   <div *ngIf="translations.length === 0">No translations found.</div>
   <div *ngIf="translations.length > 0">
     <table class="table table-bordered">
@@ -20,10 +22,38 @@
           <td>{{ translation.from_lang }}</td>
           <td>{{ translation.to_lang }}</td>
           <td>
-            <button class="btn btn-danger btn-sm" (click)="deleteTranslation(translation.id)">Delete</button>
+            <button class="btn btn-info btn-sm" (click)="openEditModal(translation)">Edit</button>
+            <button class="btn btn-sm button-delete" (click)="deleteTranslation(translation.id)">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal" *ngIf="showEditForm">
+    <div class="modal-content">
+      <span class="close" (click)="showEditForm = false">&times;</span>
+      <form [formGroup]="editForm" (ngSubmit)="saveEdit()">
+        <div class="form-group">
+          <label for="request_text">Original Text:</label>
+          <input type="text" formControlName="request_text" id="request_text">
+        </div>
+        <div class="form-group">
+          <label for="translated_text">Translated Text:</label>
+          <input type="text" formControlName="translated_text" id="translated_text">
+        </div>
+        <div class="form-group">
+          <label for="from_lang">From Language:</label>
+          <input type="text" formControlName="from_lang" id="from_lang">
+        </div>
+        <div class="form-group">
+          <label for="to_lang">To Language:</label>
+          <input type="text" formControlName="to_lang" id="to_lang">
+        </div>
+        <button type="submit">Guardar Cambios</button>
+        <button type="button" (click)="showEditForm = false">Cancel</button>
+      </form>
+    </div>
   </div>
 </div>

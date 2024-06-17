@@ -8,6 +8,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IdiomasDisponiblesComponent } from './components/idiomas-disponibles/idiomas-disponibles.component';
 import { TraductorTextComponent } from './components/traductor-text/traductor-text.component';
 import { TraductorHistoryComponent } from './components/traductor-history/traductor-history.component';
+import { InactiveHistoryComponent } from './components/inactive-history/inactive-history.component';
 
 const routes: Routes = [
   {
@@ -44,7 +45,8 @@ const routes: Routes = [
       { path: 'Historial', component: TraductorHistoryComponent }
     ]
   },
-  { path: 'Historial', component: TraductorHistoryComponent }
+  { path: 'Historial', component: TraductorHistoryComponent },
+  { path: 'inactive', component: InactiveHistoryComponent }
 ];
 
 @NgModule({

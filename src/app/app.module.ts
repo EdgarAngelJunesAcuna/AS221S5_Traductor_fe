@@ -24,6 +24,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IdiomasDisponiblesComponent } from './components/idiomas-disponibles/idiomas-disponibles.component';
 import { TraductorTextComponent } from './components/traductor-text/traductor-text.component';
 import { TraductorHistoryComponent } from './components/traductor-history/traductor-history.component';
+import { InactiveHistoryComponent } from './components/inactive-history/inactive-history.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TraductorHistoryComponent } from './components/traductor-history/traduc
     DashboardComponent,
     IdiomasDisponiblesComponent,
     TraductorTextComponent,
-    TraductorHistoryComponent
+    TraductorHistoryComponent,
+    InactiveHistoryComponent
   ],
   imports: [
     BrowserModule,
